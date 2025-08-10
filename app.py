@@ -23,7 +23,7 @@ def generate_image(seed=None):
     if seed:
         random.seed(seed)
         # The randomuser.me API also accepts a seed!
-        api_url = f"https://randomuser.me/api/?seed={seed}"
+        api_url = f"https://randomuser.me/api/"
     else:
         api_url = "https://randomuser.me/api/"
 
@@ -192,3 +192,4 @@ def home():
 # This allows you to run the app by executing `python app.py`
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
