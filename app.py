@@ -27,6 +27,9 @@ def generate_image(seed=None):
     else:
         api_url = "https://randomuser.me/api/"
 
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
     # Step 1: Get random user data
     try:
         response = requests.get(api_url)
@@ -192,4 +195,5 @@ def home():
 # This allows you to run the app by executing `python app.py`
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
 
